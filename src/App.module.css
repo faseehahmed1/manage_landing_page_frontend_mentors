@@ -1,0 +1,44 @@
+.container{
+    width: min(1110px, 100% - 2rem); /*prevent touching side of screeen when small screen*/
+    margin-inline: auto;
+}
+
+.even_columns{
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 50em){
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.button{
+    background-color: var(--clr-secondary-600);
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: var(--clr-neutral-500);
+    box-shadow: 0 1em 1em -1em var(--clr-secondary-400);
+    &:hover {
+      background-color: var(--clr-secondary-400);
+    }
+  }
+
+  .button[data-type="inverted"]{
+    background-color: var(--clr-neutral-500);
+    color: var(--clr-secondary-600);
+  }
+
+  .mobile_nav_toggle{
+    border: 0;
+    padding: 0.5em;
+    background: transparent;
+  }
+
+  .icon_close{
+    display: none;
+  }
+  
+  .primary_header{
+    margin-top: 45px;
+  }
